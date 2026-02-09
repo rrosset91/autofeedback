@@ -1,0 +1,73 @@
+{
+  "nav": {
+    "home": "Home",
+    "brands": "Brands",
+    "blog": "Blog",
+    "login": "Login",
+    "register": "Register",
+    "logout": "Logout",
+    "myReviews": "My Reviews"
+  },
+  "hero": {
+    "title": "Real Car Reviews from Real Owners",
+    "subtitle": "Discover reliable insights on thousands of car models across Europe",
+    "cta": "Explore Reviews",
+    "writeReview": "Write a Review"
+  },
+  "review": {
+    "writeReview": "Write a Review",
+    "editReview": "Edit Review",
+    "deleteReview": "Delete Review",
+    "reliability": "Reliability",
+    "maintenance": "Maintenance Cost",
+    "comfort": "Comfort",
+    "performance": "Performance",
+    "fuelConsumption": "Fuel Consumption",
+    "overall": "Overall Rating",
+    "pros": "Pros",
+    "cons": "Cons",
+    "recommendation": "Recommendation",
+    "summary": "One-Line Summary",
+    "reviewsCount": "{count} reviews"
+  },
+  "empty": {
+    "noReviews": "No reviews yet for this model",
+    "beFirst": "Be the first to share your experience!",
+    "loginRequired": "Please login to write a review",
+    "noResults": "No results found"
+  },
+  "form": {
+    "year": "Year",
+    "fuelType": "Fuel Type",
+    "transmission": "Transmission",
+    "ownership": "Ownership Status",
+    "currentOwner": "Current Owner",
+    "formerOwner": "Former Owner",
+    "ownershipFrom": "Owner Since",
+    "ownershipTo": "Owner Until",
+    "submit": "Submit Review",
+    "cancel": "Cancel",
+    "save": "Save",
+    "email": "Email",
+    "password": "Password",
+    "username": "Username",
+    "confirmPassword": "Confirm Password"
+  },
+  "auth": {
+    "signInWithGoogle": "Sign in with Google",
+    "orContinueWith": "Or continue with",
+    "alreadyHaveAccount": "Already have an account?",
+    "dontHaveAccount": "Don't have an account?",
+    "signInHere": "Sign in here",
+    "registerHere": "Register here"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success!",
+    "tryAgain": "Try again",
+    "back": "Back",
+    "next": "Next",
+    "viewAll": "View all"
+  }
+}

@@ -1,0 +1,20 @@
+name = "autofeedback"
+compatibility_date = "2024-01-29"
+pages_build_output_dir = ".svelte-kit/cloudflare"
+
+# D1 Database Binding
+[[d1_databases]]
+binding = "DB"
+database_name = "autofeedback-db"
+database_id = "b492c599-4f60-471a-96d8-bfbcf7549366"
+
+# Environment Variables (set in Cloudflare Pages dashboard)
+[vars]
+ENVIRONMENT = "development"
+
+# Production Environment
+[env.production]
+name = "autofeedback"
+
+[env.production.vars]
+ENVIRONMENT = "production"

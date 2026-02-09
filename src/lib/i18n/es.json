@@ -1,0 +1,73 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "brands": "Marcas",
+    "blog": "Blog",
+    "login": "Iniciar sesión",
+    "register": "Registrarse",
+    "logout": "Cerrar sesión",
+    "myReviews": "Mis Reseñas"
+  },
+  "hero": {
+    "title": "Reseñas Reales de Propietarios Reales",
+    "subtitle": "Descubre información confiable sobre miles de modelos de coches en Europa",
+    "cta": "Explorar Reseñas",
+    "writeReview": "Escribir Reseña"
+  },
+  "review": {
+    "writeReview": "Escribir Reseña",
+    "editReview": "Editar Reseña",
+    "deleteReview": "Eliminar Reseña",
+    "reliability": "Fiabilidad",
+    "maintenance": "Costo de Mantenimiento",
+    "comfort": "Comodidad",
+    "performance": "Rendimiento",
+    "fuelConsumption": "Consumo de Combustible",
+    "overall": "Calificación General",
+    "pros": "Ventajas",
+    "cons": "Desventajas",
+    "recommendation": "Recomendación",
+    "summary": "Resumen en Una Línea",
+    "reviewsCount": "{count} reseñas"
+  },
+  "empty": {
+    "noReviews": "Aún no hay reseñas para este modelo",
+    "beFirst": "¡Sé el primero en compartir tu experiencia!",
+    "loginRequired": "Por favor inicia sesión para escribir una reseña",
+    "noResults": "No se encontraron resultados"
+  },
+  "form": {
+    "year": "Año",
+    "fuelType": "Tipo de Combustible",
+    "transmission": "Transmisión",
+    "ownership": "Estado de Propiedad",
+    "currentOwner": "Propietario Actual",
+    "formerOwner": "Ex-Propietario",
+    "ownershipFrom": "Propietario Desde",
+    "ownershipTo": "Propietario Hasta",
+    "submit": "Enviar Reseña",
+    "cancel": "Cancelar",
+    "save": "Guardar",
+    "email": "Correo electrónico",
+    "password": "Contraseña",
+    "username": "Nombre de usuario",
+    "confirmPassword": "Confirmar Contraseña"
+  },
+  "auth": {
+    "signInWithGoogle": "Iniciar sesión con Google",
+    "orContinueWith": "O continuar con",
+    "alreadyHaveAccount": "¿Ya tienes una cuenta?",
+    "dontHaveAccount": "¿No tienes una cuenta?",
+    "signInHere": "Inicia sesión aquí",
+    "registerHere": "Regístrate aquí"
+  },
+  "common": {
+    "loading": "Cargando...",
+    "error": "Error",
+    "success": "¡Éxito!",
+    "tryAgain": "Intentar de nuevo",
+    "back": "Atrás",
+    "next": "Siguiente",
+    "viewAll": "Ver todo"
+  }
+}
