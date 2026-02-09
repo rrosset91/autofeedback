@@ -16,5 +16,10 @@ ENVIRONMENT = "development"
 [env.production]
 name = "autofeedback"
 
+[[env.production.d1_databases]]
+binding = "DB"
+database_name = "autofeedback-db"
+database_id = "b492c599-4f60-471a-96d8-bfbcf7549366"
+
 [env.production.vars]
 ENVIRONMENT = "production"
