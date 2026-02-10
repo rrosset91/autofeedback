@@ -11,3 +11,9 @@ vite.config.ts.timestamp-*
 .wrangler
 dist
 .dev.vars
+
+# Package locks (Cloudflare generates its own)
+package-lock.json
+npm-debug.log*
+yarn.lock
+pnpm-lock.yaml
