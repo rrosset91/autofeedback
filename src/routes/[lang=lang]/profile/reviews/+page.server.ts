@@ -17,7 +17,8 @@ export const load: PageServerLoad = async ({ locals, platform, params }) => {
 	const reviews = await getUserReviews(db, locals.user.id);
 
 	return {
-		reviews
+		reviews,
+		user: locals.user
 	};
 };
 

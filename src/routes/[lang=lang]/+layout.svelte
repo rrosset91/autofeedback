@@ -2,6 +2,7 @@
 	import type { LayoutData } from './$types';
 	import Header from '$lib/components/Header.svelte';
 	import Footer from '$lib/components/Footer.svelte';
+	import CookieConsent from '$lib/components/CookieConsent.svelte';
 	
 	export let data: LayoutData;
 	
@@ -21,4 +22,7 @@
 	</main>
 	
 	<Footer {translations} {lang} />
+	
+	<!-- Cookie Consent Banner -->
+	<CookieConsent />
 </div>
