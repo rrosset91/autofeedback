@@ -3,7 +3,6 @@ import type { Actions, PageServerLoad } from './$types';
 import { getCarDataClient } from '$lib/server/cardata';
 import { createReview } from '$lib/server/reviews';
 import { reviewSchema, verifyTurnstile } from '$lib/utils/validation';
-import { PUBLIC_TURNSTILE_SITE_KEY } from '$env/static/public';
 
 export const load: PageServerLoad = async ({ params, platform, locals }) => {
 	// Require authentication
@@ -35,7 +34,7 @@ export const load: PageServerLoad = async ({ params, platform, locals }) => {
 		return {
 			brand,
 			model,
-			turnstileSiteKey: PUBLIC_TURNSTILE_SITE_KEY
+			turnstileSiteKey: platform?.env?.PUBLIC_TURNSTILE_SITE_KEY || ''
 		};
 	} catch (err) {
 		console.error('Error loading review form:', err);

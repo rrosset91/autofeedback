@@ -1,12 +1,16 @@
 // Google OAuth initiation endpoint
-import { redirect } from '@sveltejs/kit';
+import { redirect, error } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
-import {
-	GOOGLE_CLIENT_ID,
-	GOOGLE_REDIRECT_URI
-} from '$env/static/private';
 
-export const GET: RequestHandler = async ({ url }) => {
+export const GET: RequestHandler = async ({ url, platform }) => {
+	// Get environment variables from platform
+	const GOOGLE_CLIENT_ID = platform?.env?.GOOGLE_CLIENT_ID;
+	const GOOGLE_REDIRECT_URI = platform?.env?.GOOGLE_REDIRECT_URI;
+	
+	if (!GOOGLE_CLIENT_ID || !GOOGLE_REDIRECT_URI) {
+		throw error(500, 'Google OAuth not configured');
+	}
+	
 	// Get the language from the referer or query parameter
 	const lang = url.searchParams.get('lang') || 'en';
 	
