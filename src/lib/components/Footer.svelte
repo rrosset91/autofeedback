@@ -42,23 +42,27 @@
 				<h4 class="text-white font-semibold mb-4">Languages</h4>
 				<ul class="space-y-2 text-sm">
 					<li>
-						<a href="/en" class="hover:text-white transition-colors">
-							🇬🇧 English
+						<a href="/en" class="flex items-center gap-2 hover:text-white transition-colors">
+							<img src="/images/icons/english.png" alt="English" class="w-5 h-5" />
+							English
 						</a>
 					</li>
 					<li>
-						<a href="/pt" class="hover:text-white transition-colors">
-							🇵🇹 Português
+						<a href="/pt" class="flex items-center gap-2 hover:text-white transition-colors">
+							<img src="/images/icons/portuguese.png" alt="Português" class="w-5 h-5" />
+							Português
 						</a>
 					</li>
 					<li>
-						<a href="/fr" class="hover:text-white transition-colors">
-							🇫🇷 Français
+						<a href="/fr" class="flex items-center gap-2 hover:text-white transition-colors">
+							<img src="/images/icons/french.png" alt="Français" class="w-5 h-5" />
+							Français
 						</a>
 					</li>
 					<li>
-						<a href="/es" class="hover:text-white transition-colors">
-							🇪🇸 Español
+						<a href="/es" class="flex items-center gap-2 hover:text-white transition-colors">
+							<img src="/images/icons/spanish.png" alt="Español" class="w-5 h-5" />
+							Español
 						</a>
 					</li>
 				</ul>
