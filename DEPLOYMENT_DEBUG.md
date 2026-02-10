@@ -125,6 +125,15 @@ Visit: https://auto-feedback.com/en
 
 ## Troubleshooting Specific Errors
 
+### ✅ Error: "Cannot find module @rollup/rollup-linux-x64-gnu" (FIXED!)
+**Issue:** npm bug with optional dependencies
+**Fix:** Add `.npmrc` file with:
+```
+node-linker=hoisted
+optional=true
+```
+**Status:** ✅ Fixed in commit `e37ce45`
+
 ### Error: "Database not available"
 **Fix:** D1 binding not configured
 - Go to Settings → Functions → D1 database bindings
@@ -195,6 +204,6 @@ Every deployment gets a preview URL like:
 ---
 
 **Last code update:** 2026-02-10  
-**Latest commit:** `6b804df` - Trigger Cloudflare Pages deployment  
-**Build status:** ✅ Working locally  
-**Deployment status:** ⏳ Waiting for configuration
+**Latest commit:** `e37ce45` - Fix Rollup build error  
+**Build status:** ✅ Working locally + Cloudflare build fixed  
+**Deployment status:** 🔄 In progress (check Cloudflare Pages dashboard)
