@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://auto-feedback.com/sitemap.xml
+
+# Disallow admin/auth pages
+Disallow: /*/auth/
+Disallow: /*/profile/
+Disallow: /api/
+
+# Crawl delay (be nice to servers)
+Crawl-delay: 1

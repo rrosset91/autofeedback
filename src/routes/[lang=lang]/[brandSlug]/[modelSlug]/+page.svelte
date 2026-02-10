@@ -4,16 +4,48 @@
 	import VehicleImage from '$lib/components/VehicleImage.svelte';
 	import SummaryCard from '$lib/components/SummaryCard.svelte';
 	import ReviewCard from '$lib/components/ReviewCard.svelte';
+	import { generateReviewAggregateSchema, generateBreadcrumbSchema } from '$lib/utils/seo';
 	import type { PageData } from './$types';
 	
 	export let data: PageData;
 	
 	$: ({ translations, lang, brand, model, reviews, aggregate, totalReviews, currentPage, totalPages, user } = data);
+	
+	// Generate structured data for SEO
+	$: structuredData = aggregate ? generateReviewAggregateSchema({
+		brandName: brand.name,
+		modelName: model.name,
+		ratingValue: aggregate.avg_overall,
+		reviewCount: aggregate.review_count,
+		url: `https://auto-feedback.com/${lang}/${brand.slug}/${model.slug}`
+	}) : null;
+	
+	$: breadcrumbData = generateBreadcrumbSchema([
+		{ name: 'Home', url: `https://auto-feedback.com/${lang}` },
+		{ name: 'Brands', url: `https://auto-feedback.com/${lang}/brands` },
+		{ name: brand.name, url: `https://auto-feedback.com/${lang}/${brand.slug}` },
+		{ name: model.name, url: `https://auto-feedback.com/${lang}/${brand.slug}/${model.slug}` }
+	]);
 </script>
 
 <svelte:head>
 	<title>{brand.name} {model.name} - {t(translations, 'review.reviewsCount').replace('{count}', String(totalReviews))} - AutoFeedback</title>
 	<meta name="description" content="Read real owner reviews for the {brand.name} {model.name}. Find out about reliability, maintenance costs, comfort, performance, and fuel economy from actual drivers." />
+	
+	<!-- Open Graph -->
+	<meta property="og:title" content="{brand.name} {model.name} Reviews" />
+	<meta property="og:description" content="{totalReviews} real owner reviews. Average rating: {aggregate ? aggregate.avg_overall.toFixed(1) : 'N/A'}/10" />
+	<meta property="og:url" content="https://auto-feedback.com/{lang}/{brand.slug}/{model.slug}" />
+	
+	<!-- Twitter Card -->
+	<meta name="twitter:title" content="{brand.name} {model.name} Reviews" />
+	<meta name="twitter:description" content="{totalReviews} real owner reviews" />
+	
+	<!-- Structured Data -->
+	{#if structuredData}
+		{@html `<script type="application/ld+json">${JSON.stringify(structuredData)}</script>`}
+	{/if}
+	{@html `<script type="application/ld+json">${JSON.stringify(breadcrumbData)}</script>`}
 </svelte:head>
 
 <div class="min-h-screen bg-gray-50">
