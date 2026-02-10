@@ -77,9 +77,14 @@
 								<input type="hidden" name="reviewId" value={review.id} />
 								<button
 									type="submit"
+									aria-label="Delete review"
 									disabled={deletingId === review.id}
 									class="p-2 bg-red-100 hover:bg-red-200 text-red-700 rounded-md transition-colors disabled:opacity-50"
-									onclick="return confirm('Are you sure you want to delete this review?')"
+									on:click={(e) => {
+										if (!confirm('Are you sure you want to delete this review?')) {
+											e.preventDefault();
+										}
+									}}
 								>
 									<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path>

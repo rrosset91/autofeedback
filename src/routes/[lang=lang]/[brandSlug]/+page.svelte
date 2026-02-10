@@ -57,6 +57,7 @@
 					/>
 					<button
 						type="submit"
+						aria-label="Search models"
 						class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-primary"
 					>
 						<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">

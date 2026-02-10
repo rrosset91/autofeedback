@@ -107,3 +107,6 @@ export function getCarDataAPI(platform: App.Platform): CarDataAPIClient {
 		platform.env.CARDATA_API_KEY
 	);
 }
+
+// Alias for backwards compatibility  
+export const getCarDataClient = getCarDataAPI;

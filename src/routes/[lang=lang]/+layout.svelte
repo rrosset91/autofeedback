@@ -10,7 +10,7 @@
 </script>
 
 <svelte:head>
-	<html lang={lang} />
+	<!-- Language is set in app.html -->
 </svelte:head>
 
 <div class="flex flex-col min-h-screen">
