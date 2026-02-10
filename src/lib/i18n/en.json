@@ -6,13 +6,29 @@
     "login": "Login",
     "register": "Register",
     "logout": "Logout",
-    "myReviews": "My Reviews"
+    "myReviews": "My Reviews",
+    "search": "Search"
   },
   "hero": {
     "title": "Real Car Reviews from Real Owners",
     "subtitle": "Discover reliable insights on thousands of car models across Europe",
     "cta": "Explore Reviews",
     "writeReview": "Write a Review"
+  },
+  "features": {
+    "title": "About AutoFeedback",
+    "authentic": {
+      "title": "Authentic Reviews",
+      "description": "Verified opinions from real owners who know their cars inside and out"
+    },
+    "detailed": {
+      "title": "Detailed Insights",
+      "description": "Comprehensive ratings on reliability, maintenance, comfort, performance, and fuel economy"
+    },
+    "european": {
+      "title": "European Focus",
+      "description": "Specialized in brands and models popular across Europe with region-specific data"
+    }
   },
   "review": {
     "writeReview": "Write a Review",

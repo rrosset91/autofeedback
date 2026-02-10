@@ -6,13 +6,29 @@
     "login": "Connexion",
     "register": "S'inscrire",
     "logout": "Déconnexion",
-    "myReviews": "Mes Avis"
+    "myReviews": "Mes Avis",
+    "search": "Rechercher"
   },
   "hero": {
     "title": "Avis Réels de Propriétaires Réels",
     "subtitle": "Découvrez des informations fiables sur des milliers de modèles de voitures en Europe",
     "cta": "Explorer les Avis",
     "writeReview": "Écrire un Avis"
+  },
+  "features": {
+    "title": "À propos d'AutoFeedback",
+    "authentic": {
+      "title": "Avis Authentiques",
+      "description": "Opinions vérifiées de vrais propriétaires qui connaissent leurs voitures de fond en comble"
+    },
+    "detailed": {
+      "title": "Analyses Détaillées",
+      "description": "Évaluations complètes sur la fiabilité, l'entretien, le confort, les performances et la consommation"
+    },
+    "european": {
+      "title": "Focus Européen",
+      "description": "Spécialisé dans les marques et modèles populaires en Europe avec des données spécifiques à la région"
+    }
   },
   "review": {
     "writeReview": "Écrire un Avis",

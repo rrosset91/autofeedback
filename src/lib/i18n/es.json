@@ -6,13 +6,29 @@
     "login": "Iniciar sesión",
     "register": "Registrarse",
     "logout": "Cerrar sesión",
-    "myReviews": "Mis Reseñas"
+    "myReviews": "Mis Reseñas",
+    "search": "Buscar"
   },
   "hero": {
     "title": "Reseñas Reales de Propietarios Reales",
     "subtitle": "Descubre información confiable sobre miles de modelos de coches en Europa",
     "cta": "Explorar Reseñas",
     "writeReview": "Escribir Reseña"
+  },
+  "features": {
+    "title": "Acerca de AutoFeedback",
+    "authentic": {
+      "title": "Reseñas Auténticas",
+      "description": "Opiniones verificadas de propietarios reales que conocen sus coches a fondo"
+    },
+    "detailed": {
+      "title": "Análisis Detallados",
+      "description": "Calificaciones completas sobre fiabilidad, mantenimiento, comodidad, rendimiento y consumo"
+    },
+    "european": {
+      "title": "Enfoque Europeo",
+      "description": "Especializado en marcas y modelos populares en Europa con datos específicos de la región"
+    }
   },
   "review": {
     "writeReview": "Escribir Reseña",

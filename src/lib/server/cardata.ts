@@ -101,7 +101,11 @@ export function createCarDataAPI(baseUrl: string, apiKey: string): CarDataAPICli
 }
 
 // Helper to get API instance from platform env
-export function getCarDataAPI(platform: App.Platform): CarDataAPIClient {
+export function getCarDataAPI(platform?: App.Platform): CarDataAPIClient {
+	if (!platform?.env?.CARDATA_API_URL || !platform?.env?.CARDATA_API_KEY) {
+		throw new Error('CarData API credentials not configured');
+	}
+	
 	return createCarDataAPI(
 		platform.env.CARDATA_API_URL,
 		platform.env.CARDATA_API_KEY

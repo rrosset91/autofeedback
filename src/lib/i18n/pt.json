@@ -4,15 +4,31 @@
     "brands": "Marcas",
     "blog": "Blog",
     "login": "Entrar",
-    "register": "Registrar",
+    "register": "Registar",
     "logout": "Sair",
-    "myReviews": "Minhas Avaliações"
+    "myReviews": "As Minhas Avaliações",
+    "search": "Pesquisar"
   },
   "hero": {
     "title": "Avaliações Reais de Proprietários Reais",
-    "subtitle": "Descubra insights confiáveis sobre milhares de modelos de carros na Europa",
+    "subtitle": "Descubra informações fiáveis sobre milhares de modelos de automóveis na Europa",
     "cta": "Explorar Avaliações",
     "writeReview": "Escrever Avaliação"
+  },
+  "features": {
+    "title": "Sobre AutoFeedback",
+    "authentic": {
+      "title": "Avaliações Autênticas",
+      "description": "Opiniões verificadas de proprietários reais que conhecem os seus automóveis dentro e fora"
+    },
+    "detailed": {
+      "title": "Análises Detalhadas",
+      "description": "Classificações abrangentes sobre fiabilidade, manutenção, conforto, desempenho e consumo de combustível"
+    },
+    "european": {
+      "title": "Foco Europeu",
+      "description": "Especializado em marcas e modelos populares em toda a Europa com dados específicos da região"
+    }
   },
   "review": {
     "writeReview": "Escrever Avaliação",
