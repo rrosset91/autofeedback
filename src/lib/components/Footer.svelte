@@ -11,11 +11,11 @@
 		<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 			<!-- About -->
 			<div>
-				<h3 class="text-white text-lg font-bold mb-4 flex items-center gap-2">
-					<span>🚗</span>
+				<a href="/{lang}" class="text-white text-lg font-bold mb-4 flex items-center gap-3 hover:opacity-80 transition-opacity inline-block">
+					<img src="/images/logo.png" alt="AutoFeedback" class="h-8 w-auto" />
 					<span>AutoFeedback</span>
-				</h3>
-				<p class="text-sm text-gray-400">
+				</a>
+				<p class="text-sm text-gray-400 mt-4">
 					Real car reviews from real owners across Europe. Make informed decisions with authentic feedback.
 				</p>
 			</div>

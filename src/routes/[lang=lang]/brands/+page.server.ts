@@ -1,13 +1,13 @@
 import { error } from '@sveltejs/kit';
 import type { PageServerLoad } from './$types';
-import { getCarDataClient } from '$lib/server/cardata';
+import { getCarDataDB } from '$lib/server/cardata-db';
 
 export const load: PageServerLoad = async ({ platform, url }) => {
-	const carDataApi = getCarDataClient(platform?.env);
-	
 	try {
+		const carDataDB = getCarDataDB(platform);
+		
 		// Get all brands
-		const brands = await carDataApi.getBrands();
+		const brands = await carDataDB.getBrands();
 		
 		// Get search query
 		const search = url.searchParams.get('search') || '';
@@ -19,11 +19,8 @@ export const load: PageServerLoad = async ({ platform, url }) => {
 			  )
 			: brands;
 		
-		// Sort brands alphabetically
-		const sortedBrands = filteredBrands.sort((a, b) => a.name.localeCompare(b.name));
-		
 		return {
-			brands: sortedBrands,
+			brands: filteredBrands,
 			totalBrands: brands.length,
 			search
 		};

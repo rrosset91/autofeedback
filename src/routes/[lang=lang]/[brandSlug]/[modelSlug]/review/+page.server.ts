@@ -1,6 +1,6 @@
 import { error, redirect, fail } from '@sveltejs/kit';
 import type { Actions, PageServerLoad } from './$types';
-import { getCarDataClient } from '$lib/server/cardata';
+import { getCarDataDB } from '$lib/server/cardata-db';
 import { createReview } from '$lib/server/reviews';
 import { reviewSchema, verifyTurnstile } from '$lib/utils/validation';
 
@@ -12,21 +12,17 @@ export const load: PageServerLoad = async ({ params, platform, locals }) => {
 
 	const { brandSlug, modelSlug } = params;
 	
-	// Get CarData API client
-	const carDataApi = getCarDataClient(platform?.env);
-	
 	try {
+		const carDataDB = getCarDataDB(platform);
+		
 		// Fetch brand
-		const brand = await carDataApi.getBrand(brandSlug);
+		const brand = await carDataDB.getBrand(brandSlug);
 		if (!brand) {
 			throw error(404, 'Brand not found');
 		}
 		
-		// Fetch all models for the brand
-		const models = await carDataApi.getBrandModels(brand.id);
-		
-		// Find the specific model by slug
-		const model = models.find((m) => m.slug === modelSlug);
+		// Fetch specific model
+		const model = await carDataDB.getModel(brand.id.toString(), modelSlug);
 		if (!model) {
 			throw error(404, 'Model not found');
 		}

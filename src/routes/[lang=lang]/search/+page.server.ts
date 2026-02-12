@@ -1,18 +1,15 @@
 import type { PageServerLoad } from './$types';
-import { getCarDataClient } from '$lib/server/cardata';
+import { getCarDataDB } from '$lib/server/cardata-db';
 
 export const load: PageServerLoad = async ({ platform }) => {
-	const carDataApi = getCarDataClient(platform?.env);
-	
 	try {
-		// Get all European brands
-		const brands = await carDataApi.getBrands('europe');
+		const carDataDB = getCarDataDB(platform);
 		
-		// Sort alphabetically
-		const sortedBrands = brands.sort((a, b) => a.name.localeCompare(b.name));
+		// Get all brands (already Europe-only from DB)
+		const brands = await carDataDB.getBrands();
 		
 		return {
-			brands: sortedBrands
+			brands
 		};
 	} catch (err) {
 		console.error('Error loading brands for search:', err);

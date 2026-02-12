@@ -13,9 +13,9 @@
 	<nav class="container mx-auto px-4">
 		<div class="flex items-center justify-between h-16">
 			<!-- Logo -->
-			<a href="/{lang}" class="flex items-center gap-2 text-2xl font-bold text-primary hover:text-primary-dark transition-colors">
-				<span>🚗</span>
-				<span>AutoFeedback</span>
+			<a href="/{lang}" class="flex items-center gap-3 hover:opacity-80 transition-opacity">
+				<img src="/images/logo.png" alt="AutoFeedback" class="h-10 w-auto" />
+				<span class="text-2xl font-bold text-primary">AutoFeedback</span>
 			</a>
 			
 			<!-- Desktop Navigation -->
