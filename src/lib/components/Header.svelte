@@ -23,9 +23,36 @@
 				<a href="/{lang}" class="text-gray-700 hover:text-primary transition-colors">
 					{t(translations, 'nav.home')}
 				</a>
-				<a href="/{lang}/brands" class="text-gray-700 hover:text-primary transition-colors">
-					{t(translations, 'nav.brands')}
-				</a>
+				
+				<!-- Language Selector -->
+				<div class="relative group">
+					<button class="flex items-center gap-1 text-gray-700 hover:text-primary transition-colors">
+						<img src="/images/icons/flag-{lang}.svg" alt={lang} class="w-5 h-5" />
+						<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+						</svg>
+					</button>
+					
+					<!-- Language Dropdown -->
+					<div class="absolute right-0 mt-2 w-36 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
+						<a href="/en" class="flex items-center gap-2 px-4 py-2 hover:bg-gray-50 rounded-t-lg">
+							<img src="/images/icons/flag-en.svg" alt="English" class="w-5 h-5" />
+							<span>English</span>
+						</a>
+						<a href="/pt" class="flex items-center gap-2 px-4 py-2 hover:bg-gray-50">
+							<img src="/images/icons/flag-pt.svg" alt="Português" class="w-5 h-5" />
+							<span>Português</span>
+						</a>
+						<a href="/fr" class="flex items-center gap-2 px-4 py-2 hover:bg-gray-50">
+							<img src="/images/icons/flag-fr.svg" alt="Français" class="w-5 h-5" />
+							<span>Français</span>
+						</a>
+						<a href="/es" class="flex items-center gap-2 px-4 py-2 hover:bg-gray-50 rounded-b-lg">
+							<img src="/images/icons/flag-es.svg" alt="Español" class="w-5 h-5" />
+							<span>Español</span>
+						</a>
+					</div>
+				</div>
 				
 				{#if user}
 					<a href="/{lang}/profile/reviews" class="text-gray-700 hover:text-primary transition-colors">
@@ -88,9 +115,25 @@
 					<a href="/{lang}" class="text-gray-700 hover:text-primary transition-colors">
 						{t(translations, 'nav.home')}
 					</a>
-					<a href="/{lang}/brands" class="text-gray-700 hover:text-primary transition-colors">
-						{t(translations, 'nav.brands')}
-					</a>
+					
+					<!-- Language Selector Mobile -->
+					<div class="border-t pt-4">
+						<p class="text-sm text-gray-600 mb-2">Language / Idioma</p>
+						<div class="flex gap-3">
+							<a href="/en" class="flex items-center gap-1 px-3 py-2 rounded hover:bg-gray-100">
+								<img src="/images/icons/flag-en.svg" alt="EN" class="w-5 h-5" />
+							</a>
+							<a href="/pt" class="flex items-center gap-1 px-3 py-2 rounded hover:bg-gray-100">
+								<img src="/images/icons/flag-pt.svg" alt="PT" class="w-5 h-5" />
+							</a>
+							<a href="/fr" class="flex items-center gap-1 px-3 py-2 rounded hover:bg-gray-100">
+								<img src="/images/icons/flag-fr.svg" alt="FR" class="w-5 h-5" />
+							</a>
+							<a href="/es" class="flex items-center gap-1 px-3 py-2 rounded hover:bg-gray-100">
+								<img src="/images/icons/flag-es.svg" alt="ES" class="w-5 h-5" />
+							</a>
+						</div>
+					</div>
 					
 					{#if user}
 						<a href="/{lang}/profile/reviews" class="text-gray-700 hover:text-primary transition-colors">
